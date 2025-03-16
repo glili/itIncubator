@@ -41,3 +41,16 @@ SELECT
     LEFT(project, commits) AS project,
     RIGHT(address, contributors) AS address
 FROM repositories;
+
+8.
+SELECT COUNT(stock) AS products, country
+FROM products
+WHERE country in ('United States of America','Canada')
+GROUP BY country
+ORDER BY products DESC;
+
+9.
+SELECT sa.senshi_name as sailor_senshi, sa.real_name_jpn as real_name, c.name as cat, s.school
+FROM sailorsenshi sa
+LEFT JOIN cats c on c.id = sa.cat_id
+LEFT JOIN schools s on s.id = sa.school_id;
