@@ -35,3 +35,9 @@ FROM departments d
 Where id in
 (Select department_id from  sales s
 WHERE s.price >98 )
+
+7.
+SELECT
+    LEFT(project, commits) AS project,
+    RIGHT(address, contributors) AS address
+FROM repositories;
