@@ -8,3 +8,25 @@ Join toys b on a.id = b.people_id
 group by a.id;
 
 3.
+Select id,
+COALESCE(NULLIF(name, ''), '[product name not found]') AS name,
+price,
+COALESCE(NULLIF(card_name, ''), '[card name not found]') AS card_name,
+card_number, transaction_date
+FROM eusales
+WHERE price > 50 AND price IS NOT NULL;
+
+4.
+SELECT first_name, last_name
+FROM names
+WHERE first_name LIKE '______%';
+
+5.
+SELECT a.name, sum(a.won) as won, sum(a.lost) as lost
+FROM fighters a
+JOIN winning_moves b on a.move_id = b.id and b.move NOT IN ('Hadoken', 'Shouoken', 'Kikoken')
+GROUP BY a.name
+ORDER BY won DESC
+LIMIT 6;
+
+6.
