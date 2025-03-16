@@ -30,3 +30,8 @@ ORDER BY won DESC
 LIMIT 6;
 
 6.
+SELECT d.id, d.name
+FROM departments d
+Where id in
+(Select department_id from  sales s
+WHERE s.price >98 )
