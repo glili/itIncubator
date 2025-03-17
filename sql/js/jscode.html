@@ -4,3 +4,10 @@
 
 usdcny(5.00);
 usdcny(21.00);
+
+2.
+function createPhoneNumber(numbers){
+    return `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6).join('')}`;
+}
+
+createPhoneNumber([9,8,7,6,5,4,3,2,1,0]);
