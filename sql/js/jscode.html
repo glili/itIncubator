@@ -16,3 +16,19 @@ createPhoneNumber([9,8,7,6,5,4,3,2,1,0]);
 function check(a, x) {
     return a.includes(x);
   }
+
+  4.
+  function isValidWalk(walk) {
+    if (walk.length !== 10) return false;
+
+      let x = 0, y = 0;
+
+      for (let dir of walk) {
+          if (dir === 'n') y++;
+          if (dir === 's') y--;
+          if (dir === 'e') x++;
+          if (dir === 'w') x--;
+      }
+
+      return x === 0 && y === 0;
+  }
